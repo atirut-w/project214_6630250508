@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Window from './components/Window.vue'
+import ProfileSection from './components/ProfileSection.vue'
 </script>
 
 <template>
@@ -11,29 +12,7 @@ import Window from './components/Window.vue'
           <p class="subtitle">Computer Engineering Student</p>
         </div>
 
-        <div class="profile-section">
-          <img src="./assets/portrait.jpg" alt="Portrait" class="portrait" />
-
-          <div class="info-card">
-            <h3>About Me</h3>
-            <div class="info-row">
-              <span class="info-label">Full name:</span>
-              <span class="info-value">อติรุจ วัฒนะมงคล</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Student ID:</span>
-              <span class="info-value">6630250508</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Major:</span>
-              <span class="info-value">Computer Engineering (S06)</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">Coming from:</span>
-              <span class="info-value">(กศน.)</span>
-            </div>
-          </div>
-        </div>
+        <ProfileSection />
 
         <div class="interests-section">
           <h3>Interests</h3>
