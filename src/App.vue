@@ -22,6 +22,7 @@ import ProfileSection from './components/ProfileSection.vue'
             <li>Game Development</li>
             <li>Computer Graphics</li>
             <li>Gaming</li>
+            <li>Software Localization</li>
           </ul>
         </div>
       </div>
