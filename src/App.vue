@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Window from './components/Window.vue'
 import ProfileSection from './components/ProfileSection.vue'
+import ClassRegisters from './components/ClassRegisters.vue'
 </script>
 
 <template>
@@ -13,6 +14,8 @@ import ProfileSection from './components/ProfileSection.vue'
         </div>
 
         <ProfileSection />
+
+        <ClassRegisters />
 
         <div class="interests-section">
           <h3>Interests</h3>
