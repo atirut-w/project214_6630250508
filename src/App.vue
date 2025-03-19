@@ -5,8 +5,47 @@ import Window from './components/Window.vue'
 <template>
   <div class="background">
     <Window title="Atirut's Portfolio" :fullHeight="true">
-      <h3>Hello, I'm Atirut!</h3>
-      <img src="./assets/portrait.jpg" alt="Portrait" class="portrait" />
+      <div class="content">
+        <div class="header">
+          <h1>Hello, I'm Atirut!</h1>
+          <p class="subtitle">Computer Engineering Student</p>
+        </div>
+
+        <div class="profile-section">
+          <img src="./assets/portrait.jpg" alt="Portrait" class="portrait" />
+
+          <div class="info-card">
+            <h3>About Me</h3>
+            <div class="info-row">
+              <span class="info-label">Full name:</span>
+              <span class="info-value">อติรุจ วัฒนะมงคล</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Student ID:</span>
+              <span class="info-value">6630250508</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Major:</span>
+              <span class="info-value">Computer Engineering (S06)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Coming from:</span>
+              <span class="info-value">(กศน.)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="interests-section">
+          <h3>Interests</h3>
+          <ul class="interests-list">
+            <li>Open Source Software</li>
+            <li>Low-Level Programming</li>
+            <li>Game Development</li>
+            <li>Computer Graphics</li>
+            <li>Gaming</li>
+          </ul>
+        </div>
+      </div>
     </Window>
   </div>
 </template>
@@ -18,6 +57,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .background {
@@ -26,10 +66,93 @@ body {
   box-sizing: border-box;
 }
 
+.content {
+  padding: 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
 .portrait {
-  max-width: 300px;
-  max-height: 300px;
-  display: block;
+  max-width: 250px;
+  max-height: 250px;
   border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+  min-width: 300px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.info-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.info-label {
+  font-weight: bold;
+  width: 100px;
+}
+
+.interests-section {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.interests-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.interests-list li {
+  background-color: #e9e9e9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
 }
 </style>
