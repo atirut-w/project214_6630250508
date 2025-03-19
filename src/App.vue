@@ -1,23 +1,13 @@
 <script setup lang="ts">
-function closeTab() {
-  window.close()
-}
+import Window from './components/Window.vue'
 </script>
 
 <template>
   <div class="background">
-    <div class="window glass active full-height">
-      <div class="title-bar">
-        <div class="title-bar-text">Atirut's Portfolio</div>
-        <div class="title-bar-controls">
-          <button aria-label="Close" @click="closeTab"></button>
-        </div>
-      </div>
-      <div class="window-body has-space scrollable">
-        <h3>Hello, I'm Atirut!</h3>
-        <img src="./assets/portrait.jpg" alt="Portrait" class="portrait" />
-      </div>
-    </div>
+    <Window title="Atirut's Portfolio" :fullHeight="true">
+      <h3>Hello, I'm Atirut!</h3>
+      <img src="./assets/portrait.jpg" alt="Portrait" class="portrait" />
+    </Window>
   </div>
 </template>
 
@@ -34,17 +24,6 @@ body {
   height: 100vh;
   padding: 1rem;
   box-sizing: border-box;
-}
-
-.full-height {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.scrollable {
-  flex: 1;
-  overflow-y: auto;
 }
 
 .portrait {
